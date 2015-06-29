@@ -1,0 +1,110 @@
+Test? Something Keylike: Something Valueiy; Key Two: Value Two
+
+Test Two??
+    Something Keylike: Something Valueiy; Key Two: Value Two
+
+#
+# The following two records are two different records, all associated with the 
+#  label Person. This file "holds" both values at "Person" label.
+#
+Person? { 
+    Age: 23
+    Name? { First: Joe; Second: R.; Family: Hacker }
+    Occupation: Programmer / Game developer; Job Type = Freelancer / Journeyman Programmer
+    
+    Other? { 
+        Celebrating: Milestone of Professional Experience!
+        Prototype? { Yes: Truth; Must be Debugged? Yes. Here?  }
+        Feeling: Victorious! But Exhausted.
+    }
+    
+    #
+    # Listage
+    #
+    Bureaucracy: [
+        One; Two; Three Four; Five Seven Eight
+    ]
+}
+
+Person?? 
+    Age: 29
+    Name? { First: Sam; Family: Bocaccio }
+    Occupation: Programmer / System Administrator
+    Job Type:   Hacker / Senior Sys. Admin @ Acme Corp.
+    
+    Other?? 
+        Celebrating? { Unknown: Yes; Do you Celebrate? Yes / No / Don't disturb me }
+        Prototype? { Yes: Truth; * This is CharmA Language Descendant of Charm,
+                     yes I am proud of this Beauty. * This is my Child}
+                     
+        Feeling: Exhausted? * Come to me, let's Celebrate, I found a Job 
+                            * Probably. I have something to Charm you with \;-)
+    
+    Bureaucracy::
+        One; Two; Three Four; Five Seven Eight
+
+{! glas -> wave ~ 0 -> Charma+charmi+funki !}
+
+Person?     Human
+Human?      Male: XY; Female: XX
+
+#
+# Transitions
+#
+Person?     Human -> Male -> Man | Human -> Female -> Woman
+
+Alien?      !not Human
+Alien?      Person | Living Being
+
+#
+# Mixed language!
+#   In this section, both Defining-Structure and State-change are inter-mingled
+#   Together in a dangerous mixage!
+#
+Living[being]??
+    #
+    # This sets (each: instance !of Living) _To_ .have::
+    #   Organism Type word associated
+    #
+    Origins; (Organism[Type]? Plant | Animal | Mushroom | Robot | Something Else)
+    Body? {
+        Organs? {{ Name? Function. }} # Default Structure:: {{name? Function.}}
+    }
+    
+    __init__?? Origins; Body =>
+        * / Origins = Origins => { 
+            # state changes?
+            * / Persistency / Lock
+        } => {
+            # state changes?
+            for! * / Body / Organs = {
+                Body / Organs
+            } # Super! This construct I like! This _will_ stay
+        } => {
+            * / Persistency / Lock / Unlock
+        }
+        
+    Breathe? Air => {
+        * / Body / Organs / Lungs! / Cycle Breathing! Air
+    }
+    
+    Substinence? Food => {
+        * / Body / Organs / Mouth! / Gulp! Food / Morsel!
+    }
+    
+
+    Is It Rooted??
+        * / Origins / Organism Type == * / Origins / Organism / Plant
+    
+    Is It Creeping??
+        * / Origins / Organism $ => {
+                !not (Plant !or Mushroom)
+            }
+    
+    # This syntax must be re-evaluated.
+    Is It Shiny => {
+        * / Origins / Organism $ => Robot
+    }
+
+* Just Words and a Graph of dependencies between them! Purest of them Purest Languages!
+

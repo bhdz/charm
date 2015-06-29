@@ -1,0 +1,13 @@
+{ Something Keylike: Something Valueiy; Key Two:  }
+
+Person? { 
+    Age: 35
+    Name: { First: Boril; Second = Buenov; Family = Boyanov }
+    
+    Other? { 
+        Celebrating: Milestone of Terra! Strategicon!
+        Prototype? { Yes: Truth; Must be Debugged? Yes. }
+        Feeling: Victorious! But Exhausted.
+    }
+}
+
