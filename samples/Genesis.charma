@@ -72,39 +72,39 @@ Living[being]??
     }
     
     __init__?? Origins; Body =>
-        * / Origins = Origins => { 
+        $ / Origins = Origins => { # "$" means "one" or "self" or "this", "*" .means: {m}any => "many" or "any"
             # state changes?
             * / Persistency / Lock
         } => {
             # state changes?
-            for! * / Body / Organs = {
+            for! $ / Body / Organs = {
                 Body / Organs
             } # Super! This construct I like! This _will_ stay
         } => {
             * / Persistency / Lock / Unlock
         }
         
-    Breathe? Air => {
-        * / Body / Organs / Lungs! / Cycle Breathing! Air
+    breathe? Air => {
+        $ / Body / Organs / Lungs! / Cycle Breathing! Air
     }
     
-    Substinence? Food => {
-        * / Body / Organs / Mouth! / Gulp! Food / Morsel!
+    substinence? Food => {
+        $ / Body / Organs / Mouth! / Gulp! Food / Morsel!
     }
     
 
     Is It Rooted??
-        * / Origins / Organism Type == * / Origins / Organism / Plant
+        $ / Origins / Organism Type == * / Origins / Organism / Plant
     
     Is It Creeping??
-        * / Origins / Organism $ => {
+        $ / Origins / Organism $ => {
                 !not (Plant !or Mushroom)
             }
     
     # This syntax must be re-evaluated.
     Is It Shiny => {
-        * / Origins / Organism $ => Robot
+        $ / Origins / Organism $ => Robot
     }
 
-* Just Words and a Graph of dependencies between them! Purest of them Purest Languages!
+* Just Words and a Graph of ** $dependencies$$ between them! $Purest of them Purest$ Languages!
 
